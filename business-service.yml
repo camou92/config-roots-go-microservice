@@ -1,4 +1,10 @@
+server:
+  port: 8081  # ✅ Change-le si besoin (par exemple si 8080 est occupé)
+
 spring:
+
+  application:
+    name: business-service  # ✅ Tu peux modifier le nom selon ton microservice
 
   datasource:
     url: jdbc:postgresql://localhost:5432/db_business
@@ -37,7 +43,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,refresh
+        include: health, refresh
 
 aws:
   s3:
@@ -46,7 +52,7 @@ aws:
     region: eu-north-1
     bucket: roots-business
 
-# 🔐 Si tu actives la sécurité avec Keycloak :
+# 🔐 Si tu utilises Keycloak, décommente et configure la section suivante :
 # security:
 #   oauth2:
 #     resourceserver:
