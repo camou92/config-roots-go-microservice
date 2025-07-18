@@ -3,9 +3,6 @@ server:
 
 spring:
 
-  application:
-    name: business-service  # ✅ Tu peux modifier le nom selon ton microservice
-
   datasource:
     url: jdbc:postgresql://localhost:5432/db_business
     username: username

@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: r1
+            uri: lb://BUSINESS-SERVICE
+            predicates:
+              - Path= /api/trade/**
+#          - id: lb://INVENTORY-SERVICE
+#            uri: http://localhost:8082
+#            predicates:
+#              - Path= /api/products/**
